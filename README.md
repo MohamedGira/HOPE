@@ -1,5 +1,5 @@
 # HOPE
-Medical Compantion
+Medical Companion
 
 ---source code for HOPE application
    ---source code for HOPE application
