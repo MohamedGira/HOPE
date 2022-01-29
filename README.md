@@ -1,7 +1,6 @@
 # HOPE
 Medical Companion
 
----source code for HOPE application
    ---source code for HOPE application
    
 * Mobile Application that contains various features. It's meant to be everyone’s medical companion, its features include, medications reminder, hospitals        reservation system, and accidents reporting, the app has 2 versions: user, and hospital.
