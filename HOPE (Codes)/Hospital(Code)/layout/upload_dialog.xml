@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="20dp">
+<TextView
+    android:id="@+id/uploadingtxt"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Uploading"
+    android:textSize="20sp"/>
+
+<ProgressBar
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/prog"
+
+    style="@style/Widget.AppCompat.ProgressBar.Horizontal"/>
+    <TextView
+        android:layout_gravity="center"
+        android:id="@+id/uploading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Uploading"/>
+
+</LinearLayout>

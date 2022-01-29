@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    >
+
+<LinearLayout
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+
+<TextView
+    android:id="@+id/rateustext"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Rate us"
+    android:textSize="20sp"
+    android:textStyle="bold"
+    android:textColor="@color/Black"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="It's been 3 days since you installed HOPE. Kindly, rate us and give us your feed back "/>
+
+
+
+        <EditText
+            android:id="@+id/feedback"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:hint="feedback" />
+
+        <Spinner
+            android:id="@+id/ratingspinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginBottom="10dp"
+
+            />
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="right">
+        <TextView
+            android:id="@+id/rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rate"
+            android:textColor="@color/lightblue"
+            android:layout_margin="5dp"/>
+        <TextView
+            android:id="@+id/remindlater2"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Remind later"
+            android:textColor="@color/lightblue"
+            android:layout_margin="5dp"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>
+</LinearLayout>

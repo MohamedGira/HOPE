@@ -1,0 +1,558 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.main.INFO_frag">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/Blood_bags_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BLOOD BAGS"
+            android:textSize="25sp"
+            android:layout_marginLeft="15dp"
+            android:textColor="@color/Darkblue"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/please_specify_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Please Specify The Number of Available Bags"
+            android:textSize="15sp"
+            android:textColor="@color/Grey"
+            android:layout_marginLeft="25dp"
+            app:layout_constraintTop_toBottomOf="@id/Blood_bags_txt"
+            app:layout_constraintStart_toStartOf="parent"/>
+        <TextView
+            android:id="@+id/nursery_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nurseries"
+            android:textSize="25sp"
+            android:layout_marginLeft="15dp"
+            android:textColor="@color/Darkblue"
+            app:layout_constraintTop_toBottomOf="@id/blood_Card"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/nursery_card"/>
+
+        <TextView
+            android:id="@+id/please_specifyN_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Please Specify The Number of Available Nurseries"
+            android:textSize="15sp"
+            android:textColor="@color/Grey"
+            android:layout_marginLeft="25dp"
+            app:layout_constraintTop_toBottomOf="@id/nursery_txt"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/blood_Card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
+            android:layout_margin="10dp"
+            android:elevation="10dp"
+            app:layout_constraintTop_toBottomOf="@id/please_specify_txt"
+            app:layout_constraintStart_toStartOf="parent">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp">
+                <TextView
+                    android:id="@+id/Aplustxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="A+"
+                    android:textColor="@color/lightblue"
+                    android:textSize="25sp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/Aplusedit"
+                    app:layout_constraintEnd_toStartOf="@id/ABplustxt"/>
+
+                <TextView
+                    android:id="@+id/Aminsutxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="A-"
+                    android:textColor="@color/lightblue"
+                    android:textSize="25sp"
+                    app:layout_constraintTop_toBottomOf="@id/Aplusedit"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/Aminsuedit"
+                    app:layout_constraintEnd_toStartOf="@id/ABminsutxt"/>
+
+                <TextView
+                    android:id="@+id/Bplustxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="AB+"
+                    android:textColor="@color/lightblue"
+                    android:textSize="25sp"
+                    app:layout_constraintBottom_toTopOf="@id/Bplusedit"
+                    app:layout_constraintEnd_toStartOf="@id/Oplustxt"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/Aminsuedit" />
+
+                <TextView
+                    android:id="@+id/Bminustxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="AB-"
+                    android:textColor="@color/lightblue"
+                    android:textSize="25sp"
+                    app:layout_constraintBottom_toTopOf="@id/Bminsuedit"
+                    app:layout_constraintEnd_toStartOf="@id/Ominustxt"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/Bplusedit" />
+
+                <TextView
+                    android:id="@+id/ABplustxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="B+"
+                    android:textColor="@color/lightblue"
+                    android:textSize="25sp"
+                    app:layout_constraintBottom_toTopOf="@id/ABplusedit"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/Aplustxt"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/ABminsutxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="B-"
+                    android:textColor="@color/lightblue"
+                    android:textSize="25sp"
+                    app:layout_constraintBottom_toTopOf="@id/Aminsuedit"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/Aminsutxt"
+                    app:layout_constraintTop_toBottomOf="@id/Aplusedit" />
+
+                <TextView
+                    android:id="@+id/Oplustxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="O+"
+                    android:textColor="@color/lightblue"
+                    android:textSize="25sp"
+                    app:layout_constraintTop_toBottomOf="@id/Aminsuedit"
+                    app:layout_constraintStart_toEndOf="@id/Bplustxt"
+                    app:layout_constraintBottom_toTopOf="@id/Oplusedit"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+                <TextView
+                    android:id="@+id/Ominustxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="O-"
+                    android:textColor="@color/lightblue"
+                    android:textSize="25sp"
+                    app:layout_constraintTop_toBottomOf="@id/Oplusedit"
+                    app:layout_constraintStart_toEndOf="@id/Bminustxt"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/Ominsuedit"/>
+                <EditText
+                    android:inputType="number"
+                    android:id="@+id/Aplusedit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/Aplustxt"
+                    app:layout_constraintStart_toStartOf="@id/Aplustxt"
+                    app:layout_constraintBottom_toTopOf="@id/Aminsutxt"
+                    android:backgroundTint="@color/babyblue"/>
+                <EditText
+                    android:inputType="number"
+                    android:backgroundTint="@color/babyblue"
+                    android:id="@+id/Aminsuedit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/Aminsutxt"
+                    app:layout_constraintStart_toStartOf="@id/Aminsutxt"
+                    app:layout_constraintBottom_toTopOf="@id/Bplustxt"/>
+                <EditText
+                    android:inputType="number"
+                    android:backgroundTint="@color/babyblue"
+                    android:id="@+id/Bplusedit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/Bplustxt"
+                    app:layout_constraintStart_toStartOf="@id/Bplustxt"
+                    app:layout_constraintBottom_toTopOf="@id/Bminustxt"/>
+                <EditText
+                    android:inputType="number"
+                    android:backgroundTint="@color/babyblue"
+                    android:id="@+id/Bminsuedit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/Bminustxt"
+                    app:layout_constraintStart_toStartOf="@id/Bminustxt"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+                <EditText
+                    android:inputType="number"
+                    android:backgroundTint="@color/babyblue"
+                    android:id="@+id/ABplusedit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/ABplustxt"
+                    app:layout_constraintStart_toStartOf="@id/ABplustxt"
+                    app:layout_constraintBottom_toTopOf="@id/ABminsutxt"/>
+                <EditText
+                    android:inputType="number"
+                    android:backgroundTint="@color/babyblue"
+                    android:id="@+id/ABminsuedit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/ABminsutxt"
+                    app:layout_constraintStart_toStartOf="@id/ABminsutxt"
+                    app:layout_constraintBottom_toTopOf="@id/Oplustxt"/>
+                <EditText
+                    android:inputType="number"
+                    android:backgroundTint="@color/babyblue"
+                    android:id="@+id/Oplusedit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/Oplustxt"
+                    app:layout_constraintStart_toStartOf="@id/Oplustxt"
+                    app:layout_constraintBottom_toTopOf="@id/Ominustxt"
+                    />
+                <EditText
+                    android:inputType="number"
+                    android:backgroundTint="@color/babyblue"
+                    android:id="@+id/Ominsuedit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/Ominustxt"
+                    app:layout_constraintStart_toStartOf="@id/Ominustxt"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/nursery_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
+            android:layout_margin="10dp"
+            android:elevation="10dp"
+            app:layout_constraintTop_toBottomOf="@id/please_specifyN_txt"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/lvl1txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="I"
+                    android:textColor="@color/lightblue"
+                    android:textSize="25sp"
+                    app:layout_constraintBottom_toTopOf="@id/lvl1edit"
+                    app:layout_constraintEnd_toStartOf="@id/lvl4txt"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/lvl2txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="II"
+                    android:textColor="@color/lightblue"
+                    android:textSize="25sp"
+                    app:layout_constraintBottom_toTopOf="@id/lvl2edit"
+                    app:layout_constraintEnd_toStartOf="@id/lvl5txt"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/lvl1txt" />
+
+                <TextView
+                    android:id="@+id/lvl3txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="III"
+                    android:textColor="@color/lightblue"
+                    android:textSize="25sp"
+                    app:layout_constraintBottom_toTopOf="@id/lvl3edit"
+                    app:layout_constraintEnd_toStartOf="@id/lvl6txt"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/lvl2txt" />
+
+                <TextView
+                    android:id="@+id/lvl4txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="IIIA"
+                    android:textColor="@color/lightblue"
+                    android:textSize="25sp"
+                    app:layout_constraintBottom_toTopOf="@id/lvl4edit"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/lvl1txt"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/lvl5txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="IIIB"
+                    android:textColor="@color/lightblue"
+                    android:textSize="25sp"
+                    app:layout_constraintBottom_toTopOf="@id/lvl5edit"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/lvl2txt"
+                    app:layout_constraintTop_toBottomOf="@id/lvl4txt" />
+
+                <TextView
+                    android:id="@+id/lvl6txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="IIIC"
+                    android:textColor="@color/lightblue"
+                    android:textSize="25sp"
+                    app:layout_constraintBottom_toTopOf="@id/lvl6edit"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/lvl3txt"
+                    app:layout_constraintTop_toBottomOf="@id/lvl5txt" />
+
+                <EditText
+                    android:id="@+id/lvl1edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/babyblue"
+                    android:inputType="number"
+                    app:layout_constraintBottom_toTopOf="@id/lvl2txt"
+                    app:layout_constraintStart_toStartOf="@id/lvl1txt"
+                    app:layout_constraintTop_toBottomOf="@id/lvl1txt" />
+
+                <EditText
+                    android:id="@+id/lvl2edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/babyblue"
+                    android:inputType="number"
+                    app:layout_constraintBottom_toTopOf="@id/lvl3txt"
+                    app:layout_constraintStart_toStartOf="@id/lvl2txt"
+                    app:layout_constraintTop_toBottomOf="@id/lvl2txt" />
+
+                <EditText
+                    android:id="@+id/lvl3edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/babyblue"
+                    android:inputType="number"
+                    app:layout_constraintStart_toStartOf="@id/lvl3txt"
+                    app:layout_constraintTop_toBottomOf="@id/lvl3txt" />
+
+                <EditText
+                    android:id="@+id/lvl4edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/babyblue"
+                    android:inputType="number"
+                    app:layout_constraintBottom_toTopOf="@id/lvl5txt"
+                    app:layout_constraintStart_toStartOf="@id/lvl4txt"
+                    app:layout_constraintTop_toBottomOf="@id/lvl4txt" />
+
+                <EditText
+                    android:id="@+id/lvl5edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/babyblue"
+                    android:inputType="number"
+                    app:layout_constraintBottom_toTopOf="@id/lvl6txt"
+                    app:layout_constraintStart_toStartOf="@id/lvl5txt"
+                    app:layout_constraintTop_toBottomOf="@id/lvl5txt" />
+
+                <EditText
+                    android:id="@+id/lvl6edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/babyblue"
+                    android:inputType="number"
+                    app:layout_constraintStart_toStartOf="@id/lvl6txt"
+                    app:layout_constraintTop_toBottomOf="@id/lvl6txt" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/emergency_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="10dp"
+            android:elevation="5dp"
+            app:layout_constraintTop_toBottomOf="@id/nursery_card"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/Num_of_beds_card"
+            app:layout_constraintBottom_toBottomOf="@+id/Num_of_beds_card"
+            android:layout_margin="10dp"
+            android:padding="10dp">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/eme_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="25sp"
+                    android:textAlignment="center"
+                    android:textColor="@color/Darkblue"
+                    android:text="Emergency \n Care is"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+                <TextView
+                    android:id="@+id/Emergncy_avalability"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="25sp"
+                    android:text="Available"
+                    android:textColor="@color/Green"
+                    app:layout_constraintTop_toBottomOf="@id/eme_txt"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/Num_of_beds_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="10dp"
+            android:elevation="5dp"
+            app:layout_constraintTop_toBottomOf="@id/nursery_card"
+            app:layout_constraintStart_toEndOf="@id/emergency_card"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_margin="10dp"
+            android:padding="10dp">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/num_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Number Of \n Bed Available"
+                    android:textColor="@color/Darkblue"
+                    android:textSize="25sp"
+                    android:textAlignment="center"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"/>
+                <EditText
+                    android:id="@+id/num_edit"
+                    android:inputType="number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/Yellow"
+                    app:layout_constraintTop_toBottomOf="@id/num_txt"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/setcard"
+            app:cardElevation="5dp"
+            app:cardCornerRadius="10dp"
+            android:layout_width="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/listcard"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_margin="10dp"
+            android:backgroundTint="@color/Darkblue"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:id="@+id/set_data_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="Set Data"
+                    android:textColor="@color/white"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+
+
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    />
+
+
+
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/listcard"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:cardCornerRadius="20dp"
+            app:layout_constraintHeight_percent="0.2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Num_of_beds_card">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                >
+                <TextView
+                    android:id="@+id/Doctor_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:text="Doctors"
+                    android:textColor="@color/Darkblue"
+                    android:textSize="25sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+                <TextView
+                    android:id="@+id/please_specifySpecial_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:text="Please Specify The Available doctors"
+                    android:textColor="@color/Grey"
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/Doctor_txt"
+                    />
+
+                <ListView
+                    android:id="@+id/speicallits"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="@color/white"
+                    android:layout_margin="10dp"
+                    app:layout_constraintTop_toBottomOf="@id/please_specifySpecial_txt"
+                    android:layout_marginTop="10dp"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

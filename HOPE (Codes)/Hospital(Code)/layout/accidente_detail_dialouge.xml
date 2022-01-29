@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dialog_bg"
+    >
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/detals_txt"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Details"
+                android:textColor="@color/Darkblue"
+                android:textSize="25sp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                />
+            <TextView
+                android:id="@+id/type_txt"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Type:"
+                android:textColor="@color/lightblue"
+                android:textSize="25sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/detals_txt"
+                app:layout_constraintTop_toBottomOf="@id/detals_txt"/>
+
+            <TextView
+                android:id="@+id/type"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fire"
+                android:textColor="@color/Darkblue"
+                android:textSize="25sp"
+                app:layout_constraintStart_toEndOf="@id/type_txt"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/detals_txt"/>
+    <TextView
+        android:id="@+id/Distance"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fire"
+        android:textColor="@color/Darkblue"
+        android:textSize="25sp"
+        app:layout_constraintStart_toEndOf="@id/type_txt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/type"/>
+
+
+            <TextView
+                android:id="@+id/Distance_txt"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Distance:"
+                android:textColor="@color/lightblue"
+                android:textSize="25sp"
+                app:layout_constraintStart_toStartOf="@id/type_txt"
+                app:layout_constraintTop_toBottomOf="@id/type_txt"/>
+
+
+            <TextView
+                android:id="@+id/location_txt"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Time:"
+                android:textColor="@color/lightblue"
+                android:textSize="25sp"
+                app:layout_constraintStart_toStartOf="@id/Distance_txt"
+                app:layout_constraintTop_toBottomOf="@id/Distance_txt"/>
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="This is some\"
+                android:textColor="@color/Darkblue"
+                android:textSize="20sp"
+                app:layout_constraintStart_toEndOf="@id/location_txt"
+                app:layout_constraintTop_toBottomOf="@id/Distance_txt"
+                app:layout_constraintTop_toTopOf="@+id/location_txt"
+                app:layout_constraintBottom_toBottomOf="@id/location_txt"
+                app:layout_constraintEnd_toEndOf="parent"/>
+            <TextView
+                android:id="@+id/Number_txt"
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NO. Of people injured:"
+                android:textColor="@color/lightblue"
+                android:textSize="20sp"
+                android:maxEms="13"
+                app:layout_constraintStart_toStartOf="@id/location_txt"
+                app:layout_constraintTop_toBottomOf="@id/time"/>
+            <TextView
+                android:id="@+id/number"
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3"
+                android:textColor="@color/Darkblue"
+                android:textSize="20sp"
+                android:maxEms="13"
+                app:layout_constraintStart_toEndOf="@id/Number_txt"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/time"/>
+            <TextView
+                android:id="@+id/pic_txt"
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/lightblue"
+                android:textSize="20sp"
+                android:maxEms="13"
+                app:layout_constraintStart_toStartOf="@id/location_txt"
+                app:layout_constraintTop_toBottomOf="@id/Number_txt"/>
+
+
+
+
+    <ListView
+        android:id="@+id/imglist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Map_card"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+         <!--   <ImageView
+                android:id="@+id/pic1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                app:layout_constraintWidth_percent="0.4"
+                app:layout_constraintHeight_percent="0.01"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/pic_txt"
+                app:layout_constraintBottom_toTopOf="@id/pic2"/>
+            <ImageView
+                android:id="@+id/pic2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintWidth_percent="0.4"
+                app:layout_constraintHeight_percent="0.01"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/pic1"/>-->
+            --><TextView
+                android:id="@+id/decision_txt"
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/lightblue"
+                android:textSize="20sp"
+                android:maxEms="13"
+                app:layout_constraintStart_toStartOf="@id/location_txt"
+                app:layout_constraintTop_toBottomOf="@id/Number_txt"/>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/Map_card"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="20dp"
+                android:backgroundTint="@color/Darkblue"
+                app:layout_constraintWidth_percent="0.3"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/imglist"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/decision_txt">
+                <TextView
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Map"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:layout_margin="10dp"/>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

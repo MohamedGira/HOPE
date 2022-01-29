@@ -1,0 +1,744 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Hospitaldetail">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_margin="@dimen/fab_margin"
+            android:id="@+id/back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back_arrow"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:id="@+id/hospitalimg"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/redpill"
+            app:layout_constraintTop_toBottomOf="@id/back_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/hospitalname"/>
+        <TextView
+            android:id="@+id/hospitalname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="October medical centre"
+            android:maxWidth="180dp"
+            android:textSize="25sp"
+            android:layout_marginTop="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/Darkblue"
+            android:layout_marginLeft="5dp"
+            app:layout_constraintStart_toEndOf="@id/hospitalimg"
+            app:layout_constraintTop_toBottomOf="@id/back_button"
+            app:layout_constraintEnd_toStartOf="@id/hospitalkind"/>
+        <TextView
+            android:id="@+id/hospitalkind"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Public"
+            android:textColor="@color/lightblue"
+            app:layout_constraintEnd_toStartOf="@+id/hospitaldistance"
+            app:layout_constraintStart_toEndOf="@id/hospitalname"
+            app:layout_constraintTop_toBottomOf="@id/hospitalname"
+            app:layout_constraintEnd_toEndOf="parent"/>
+        <TextView
+            android:id="@+id/hospitaldistance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="200M"
+            android:textColor="@color/lightblue"
+            app:layout_constraintStart_toEndOf="@id/hospitalkind"
+            app:layout_constraintTop_toBottomOf="@id/hospitalname"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/callcard"
+            app:cardElevation="5dp"
+            app:cardCornerRadius="10dp"
+            android:layout_width="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/hospitalimg"
+            app:layout_constraintTop_toBottomOf="@id/hospitalkind"
+            app:layout_constraintEnd_toStartOf="@id/mapcard"
+            android:layout_height="wrap_content">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+                <ImageView
+                    android:id="@+id/callimg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_call"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/calltxt"
+                    android:layout_margin="5dp"
+                    />
+
+                <TextView
+                    android:id="@+id/calltxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Call"
+                    android:textSize="25sp"
+                    android:textColor="@color/lightblue"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@id/callimg"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_margin="5dp"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/mapcard"
+            app:cardElevation="5dp"
+            app:cardCornerRadius="10dp"
+            android:layout_width="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/callcard"
+            app:layout_constraintTop_toBottomOf="@id/hospitalkind"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_height="wrap_content">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+                <ImageView
+                    android:id="@+id/mapimg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_navigation"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/maptxt"
+                    android:layout_margin="5dp"
+                    />
+
+                <TextView
+                    android:id="@+id/maptxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Map"
+                    android:textSize="25sp"
+                    android:textColor="@color/lightblue"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@id/mapimg"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_margin="5dp"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/bloodcard"
+            android:layout_width="match_parent"
+            app:cardCornerRadius="15dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/callcard"
+            android:layout_marginTop="25dp"
+
+            >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/noofbloodbagstxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Available Blood Types "
+                    android:textColor="@color/lightblue"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/noofbloodbagstxt">
+
+
+                    <TextView
+                        android:id="@+id/bloodtypeAplustxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="A+"
+                        android:textColor="@color/lightblue"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toStartOf="@id/bloodtypeAminustxt"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <TextView
+                        android:id="@+id/bloodtypeAminustxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="A-"
+                        android:textColor="@color/lightblue"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toStartOf="@id/bloodtypeBplustxt"
+                        app:layout_constraintStart_toEndOf="@id/bloodtypeAplustxt"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <TextView
+                        android:id="@+id/bloodtypeBplustxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="B+"
+                        android:textColor="@color/lightblue"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toStartOf="@id/bloodtypeBminustxt"
+                        app:layout_constraintStart_toEndOf="@id/bloodtypeAminustxt"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/bloodtypeBminustxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="B-"
+                        android:textColor="@color/lightblue"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toStartOf="@id/bloodtypeABplustxt"
+                        app:layout_constraintStart_toEndOf="@id/bloodtypeBplustxt"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <TextView
+                        android:id="@+id/bloodtypeABplustxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="AB+"
+                        android:textColor="@color/lightblue"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toStartOf="@id/bloodtypeABminustxt"
+                        app:layout_constraintStart_toEndOf="@id/bloodtypeBminustxt"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <TextView
+                        android:id="@+id/bloodtypeABminustxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="AB-"
+                        android:textColor="@color/lightblue"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toStartOf="@id/bloodtypeOplustxt"
+                        app:layout_constraintStart_toEndOf="@id/bloodtypeABplustxt"
+
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <TextView
+                        android:id="@+id/bloodtypeOplustxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="O+"
+                        android:textColor="@color/lightblue"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toStartOf="@id/bloodtypeOminustxt"
+                        app:layout_constraintStart_toEndOf="@id/bloodtypeABminustxt"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <TextView
+                        android:id="@+id/bloodtypeOminustxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="O-"
+                        android:textColor="@color/lightblue"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/bloodtypeOplustxt"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/bloodtypeAplusnum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/fab_margin"
+                        android:text=""
+                        android:textColor="@color/Yellow"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="@id/bloodtypeAplustxt"
+                        app:layout_constraintStart_toStartOf="@id/bloodtypeAplustxt"
+                        app:layout_constraintTop_toBottomOf="@id/bloodtypeAplustxt" />
+
+                    <TextView
+                        android:id="@+id/bloodtypeAminusnum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/fab_margin"
+                        android:text=""
+                        android:textColor="@color/Yellow"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="@id/bloodtypeAminustxt"
+                        app:layout_constraintStart_toStartOf="@id/bloodtypeAminustxt"
+                        app:layout_constraintTop_toBottomOf="@id/bloodtypeAminustxt" />
+
+                    <TextView
+                        android:id="@+id/bloodtypeBplusnum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/fab_margin"
+                        android:text=""
+                        android:textColor="@color/Yellow"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="@id/bloodtypeBplustxt"
+                        app:layout_constraintStart_toStartOf="@id/bloodtypeBplustxt"
+                        app:layout_constraintTop_toBottomOf="@id/bloodtypeBplustxt" />
+
+                    <TextView
+                        android:id="@+id/bloodtypeBminusnum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/fab_margin"
+                        android:text=""
+                        android:textColor="@color/Yellow"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="@id/bloodtypeBminustxt"
+                        app:layout_constraintStart_toStartOf="@id/bloodtypeBminustxt"
+                        app:layout_constraintTop_toBottomOf="@id/bloodtypeBminustxt" />
+
+                    <TextView
+                        android:id="@+id/bloodtypeABplusnum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/fab_margin"
+                        android:text=""
+                        android:textColor="@color/Yellow"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="@id/bloodtypeABplustxt"
+                        app:layout_constraintStart_toStartOf="@id/bloodtypeABplustxt"
+                        app:layout_constraintTop_toBottomOf="@id/bloodtypeABplustxt" />
+
+                    <TextView
+                        android:id="@+id/bloodtypeABminusnum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/fab_margin"
+                        android:text=""
+                        android:textColor="@color/Yellow"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="@id/bloodtypeABminustxt"
+                        app:layout_constraintStart_toStartOf="@id/bloodtypeABminustxt"
+                        app:layout_constraintTop_toBottomOf="@id/bloodtypeABminustxt" />
+
+                    <TextView
+                        android:id="@+id/bloodtypeOplusnum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/fab_margin"
+                        android:text=""
+                        android:textColor="@color/Yellow"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="@id/bloodtypeOplustxt"
+                        app:layout_constraintStart_toStartOf="@id/bloodtypeOplustxt"
+                        app:layout_constraintTop_toBottomOf="@id/bloodtypeOplustxt" />
+
+                    <TextView
+                        android:id="@+id/bloodtypeOminusnum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/fab_margin"
+                        android:text=""
+                        android:textColor="@color/Yellow"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="@id/bloodtypeOminustxt"
+                        app:layout_constraintStart_toStartOf="@id/bloodtypeOminustxt"
+                        app:layout_constraintTop_toBottomOf="@id/bloodtypeOminustxt" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/nursrycard"
+            android:layout_width="match_parent"
+            app:cardCornerRadius="15dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/bloodcard"
+            android:layout_marginTop="25dp"
+            >
+
+            <TextView
+                android:id="@+id/nurseriesavailabletxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No. Of Nurseries Available"
+                android:textStyle="bold"
+                android:textColor="@color/Darkblue"
+                android:textSize="15sp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="15dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="15dp"
+                android:layout_height="wrap_content">
+
+
+
+                <TextView
+                    android:id="@+id/lvl1nurtxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="I"
+                    android:layout_gravity="center"
+                    android:textSize="20sp"
+                    android:textColor="@color/lightblue"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/lvl2nurtxt"
+                    />
+
+                <TextView
+                    android:id="@+id/lvl2nurtxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="II"
+                    android:layout_gravity="center"
+                    android:textSize="20sp"
+                    android:textColor="@color/lightblue"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@id/lvl1nurtxt"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/lvl3nurtxt"
+                    />
+
+
+                <TextView
+                    android:id="@+id/lvl3nurtxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="III"
+                    android:layout_gravity="center"
+                    android:textSize="20sp"
+                    android:textColor="@color/lightblue"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@id/lvl2nurtxt"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/lvl4nurtxt"
+                    />
+
+
+                <TextView
+                    android:id="@+id/lvl4nurtxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="IIIA"
+                    android:textSize="20sp"
+                    android:textColor="@color/lightblue"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@id/lvl3nurtxt"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/lvl5nurtxt"
+                    />
+                <TextView
+                    android:id="@+id/lvl5nurtxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="IIIB"
+                    android:textSize="20sp"
+                    android:textColor="@color/lightblue"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@id/lvl4nurtxt"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/lvl6nurtxt"
+                    />
+
+
+                <TextView
+                    android:id="@+id/lvl6nurtxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="IIIC"
+                    android:textSize="20sp"
+                    android:textColor="@color/lightblue"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@id/lvl5nurtxt"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+
+                    />
+
+
+
+                <TextView
+                    android:layout_marginTop="@dimen/fab_margin"
+                    android:id="@+id/lvl1nurnum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="20sp"
+                    android:textColor="@color/Yellow"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@id/lvl1nurtxt"
+                    app:layout_constraintTop_toBottomOf="@id/lvl1nurtxt"
+                    app:layout_constraintEnd_toEndOf="@id/lvl1nurtxt"
+                    />
+
+                <TextView
+                    android:layout_marginTop="@dimen/fab_margin"
+                    android:id="@+id/lvl2nurnum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="20sp"
+                    android:textColor="@color/Yellow"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@id/lvl2nurtxt"
+                    app:layout_constraintTop_toBottomOf="@id/lvl2nurtxt"
+                    app:layout_constraintEnd_toEndOf="@id/lvl2nurtxt"
+
+                    />
+
+                <TextView
+
+                    android:id="@+id/lvl3nurnum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/fab_margin"
+                    android:text=""
+                    android:textColor="@color/Yellow"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@id/lvl3nurtxt"
+                    app:layout_constraintTop_toBottomOf="@id/lvl3nurtxt"
+                    app:layout_constraintEnd_toEndOf="@id/lvl3nurtxt"
+
+                    />
+
+
+
+                <TextView
+                    android:layout_marginTop="@dimen/fab_margin"
+                    android:id="@+id/lvl4nurnum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:layout_gravity="center"
+                    android:textSize="20sp"
+                    android:textColor="@color/Yellow"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@id/lvl4nurtxt"
+                    app:layout_constraintTop_toBottomOf="@id/lvl4nurtxt"
+                    app:layout_constraintEnd_toEndOf="@id/lvl4nurtxt"
+
+                    />
+
+
+                <TextView
+                    android:layout_marginTop="@dimen/fab_margin"
+                    android:id="@+id/lvl5nurnum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="20sp"
+                    android:textColor="@color/Yellow"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    app:layout_constraintStart_toStartOf="@id/lvl5nurtxt"
+                    app:layout_constraintTop_toBottomOf="@id/lvl5nurtxt"
+                    app:layout_constraintEnd_toEndOf="@id/lvl5nurtxt"
+
+                    />
+
+                <TextView
+                    android:layout_marginTop="@dimen/fab_margin"
+                    android:id="@+id/lvl6nurnum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="20sp"
+                    android:textColor="@color/Yellow"
+                    android:layout_gravity="center"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@id/lvl6nurtxt"
+                    app:layout_constraintTop_toBottomOf="@id/lvl6nurtxt"
+                    app:layout_constraintEnd_toEndOf="@id/lvl6nurtxt"
+
+                    />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/emergencycard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/nursrycard"
+            app:layout_constraintStart_toStartOf="parent"
+            app:cardCornerRadius="15dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="25dp"
+            >
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                >
+
+                <TextView
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/verticalline"
+                    android:id="@+id/emergencytxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Emergency \n care"
+                    android:gravity="center"
+                    android:textSize="25sp"
+                    android:textColor="@color/Darkblue"/>
+                <TextView
+                    android:id="@+id/emergencyavailablilitytxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Available"
+                    android:textColor="@color/Green"
+                    android:textStyle="bold"
+                    android:textSize="25sp"
+                    app:layout_constraintTop_toTopOf="@id/numberofbedsavilabletxt"
+                    app:layout_constraintStart_toStartOf="@id/emergencytxt"
+                    app:layout_constraintEnd_toEndOf="@id/emergencytxt"/>
+
+                <View
+                    android:id="@+id/verticalline"
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/Darkblue"
+                    app:layout_constraintStart_toEndOf="@id/emergencytxt"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/numbeds"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    />
+                <TextView
+                    android:id="@+id/numbeds"
+                    app:layout_constraintStart_toEndOf="@id/verticalline"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="25sp"
+                    android:textColor="@color/Darkblue"
+                    android:text="No of beds \n Available"/>
+                <TextView
+
+                    android:id="@+id/numberofbedsavilabletxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="66"
+                    android:textColor="@color/Yellow"
+                    android:textStyle="bold"
+                    android:textSize="25sp"
+                    app:layout_constraintStart_toStartOf="@id/numbeds"
+                    app:layout_constraintTop_toBottomOf="@id/numbeds"
+                    app:layout_constraintEnd_toEndOf="@id/numbeds"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/specalisttitlecard"
+            app:layout_constraintTop_toBottomOf="@id/emergencycard"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:cardCornerRadius="15dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="25dp"
+            android:backgroundTint="@color/white"
+            >
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/spectxt"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Available Specializations"
+                    android:textSize="25sp"
+                    android:textColor="@color/lightblue"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="15dp"/>
+
+                <ListView
+                    android:id="@+id/lisssst"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/spectxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:dividerHeight="5dp"
+                    android:divider="@color/white"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
